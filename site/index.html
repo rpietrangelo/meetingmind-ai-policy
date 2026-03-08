@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MeetingMind — Private AI Meeting Notes</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0A0A0F;
+      color: #F0F0FF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+    }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 40px; border-bottom: 1px solid #1E1E2E;
+      position: sticky; top: 0; background: #0A0A0Fdd; backdrop-filter: blur(8px); z-index: 10;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-dot { width: 30px; height: 30px; border-radius: 50%; background: #6C63FF; display: flex; align-items: center; justify-content: center; }
+    .nav-logo-dot svg { width: 15px; height: 15px; fill: #fff; }
+    .nav-logo-name { font-size: 18px; font-weight: 700; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { font-size: 14px; color: #8888AA; text-decoration: none; }
+    .nav-links a:hover { color: #F0F0FF; }
+    .hero {
+      max-width: 860px; margin: 0 auto;
+      padding: 100px 24px 80px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #6C63FF15;
+      border: 1px solid #6C63FF40;
+      color: #6C63FF;
+      font-size: 13px; font-weight: 600;
+      padding: 6px 16px; border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800; line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    h1 span { color: #6C63FF; }
+    .hero-sub {
+      font-size: 18px; color: #8888AA;
+      max-width: 520px; margin: 0 auto 40px;
+    }
+    .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: #6C63FF; color: #fff;
+      padding: 14px 32px; border-radius: 10px;
+      font-size: 16px; font-weight: 600;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-secondary {
+      background: transparent; color: #8888AA;
+      padding: 14px 32px; border-radius: 10px;
+      font-size: 16px; font-weight: 600;
+      text-decoration: none; display: inline-block;
+      border: 1px solid #1E1E2E;
+    }
+    .features {
+      max-width: 1000px; margin: 0 auto;
+      padding: 80px 24px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: #12121A; border: 1px solid #1E1E2E;
+      border-radius: 16px; padding: 28px;
+    }
+    .feature-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      background: #6C63FF20; display: flex; align-items: center;
+      justify-content: center; font-size: 22px; margin-bottom: 16px;
+    }
+    .feature-card h3 { font-size: 17px; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8888AA; }
+    .privacy-banner {
+      max-width: 760px; margin: 0 auto 80px;
+      background: #12121A; border: 1px solid #6C63FF30;
+      border-radius: 16px; padding: 32px 40px;
+      text-align: center;
+    }
+    .privacy-banner h2 { font-size: 24px; margin-bottom: 12px; }
+    .privacy-banner p { color: #8888AA; max-width: 500px; margin: 0 auto; }
+    footer {
+      border-top: 1px solid #1E1E2E;
+      padding: 32px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-logo { font-size: 15px; font-weight: 700; color: #8888AA; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { font-size: 13px; color: #555566; text-decoration: none; }
+    .footer-links a:hover { color: #8888AA; }
+    .footer-copy { font-size: 13px; color: #555566; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-logo-dot">
+        <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zm0 14a7 7 0 0 0 7-7h2a9 9 0 0 1-8 8.94V20h3v2H8v-2h3v-2.06A9 9 0 0 1 3 9h2a7 7 0 0 0 7 7z"/></svg>
+      </div>
+      <span class="nav-logo-name">MeetingMind</span>
+    </div>
+    <div class="nav-links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-badge">Available on Android</div>
+    <h1>Meeting notes that<br/><span>never leave your phone</span></h1>
+    <p class="hero-sub">MeetingMind transcribes your meetings and generates AI notes entirely on-device. No cloud AI. No audio uploads. Just private, accurate meeting notes.</p>
+    <div class="cta-row">
+      <a href="#" class="btn-primary">Get on Google Play</a>
+      <a href="privacy.html" class="btn-secondary">Privacy Policy</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-icon">🎙️</div>
+      <h3>On-Device Transcription</h3>
+      <p>Powered by Whisper AI running entirely on your device. Your audio never leaves your phone.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✨</div>
+      <h3>AI Key Notes</h3>
+      <p>Phi-3 Mini generates concise key notes and surfaces unanswered questions in real time.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔒</div>
+      <h3>100% Private</h3>
+      <p>Audio is processed locally and never uploaded. Only text syncs to your account — and only if you want it to.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📤</div>
+      <h3>Export &amp; Share</h3>
+      <p>Export your meeting notes as text or PDF. Pro users can receive formatted email reports.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🗂️</div>
+      <h3>Meeting History</h3>
+      <p>Search your full meeting history. Free users get 30 days, Pro users get a full year.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌐</div>
+      <h3>Works Offline</h3>
+      <p>No internet required for recording and transcription. Everything runs on your device.</p>
+    </div>
+  </section>
+
+  <div class="privacy-banner">
+    <h2>Your privacy is the product</h2>
+    <p>We built MeetingMind because we believe your meeting conversations should stay yours. Audio never leaves your device — we're not in the business of selling your data.</p>
+  </div>
+
+  <footer>
+    <span class="footer-logo">MeetingMind</span>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 MeetingMind</span>
+  </footer>
+
+</body>
+</html>
