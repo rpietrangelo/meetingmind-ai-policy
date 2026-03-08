@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account — MeetingMind</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0A0A0F;
+      color: #F0F0FF;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    .container { max-width: 640px; margin: 0 auto; padding: 60px 0 80px; }
+    .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 48px; }
+    .logo-dot { width: 36px; height: 36px; border-radius: 50%; background: #6C63FF; display: flex; align-items: center; justify-content: center; }
+    .logo-dot svg { width: 18px; height: 18px; fill: #fff; }
+    .logo-name { font-size: 20px; font-weight: 700; color: #F0F0FF; }
+    .badge {
+      display: inline-block;
+      background: #FF6B6B20;
+      border: 1px solid #FF6B6B50;
+      color: #FF6B6B;
+      font-size: 12px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      padding: 4px 12px; border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .sub { font-size: 16px; color: #8888AA; margin-bottom: 40px; }
+    .step-card {
+      background: #12121A;
+      border: 1px solid #1E1E2E;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: #6C63FF20; border: 1px solid #6C63FF40;
+      color: #6C63FF; font-size: 14px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-content h3 { font-size: 16px; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8888AA; margin: 0; }
+    .warning-box {
+      background: #FF6B6B10;
+      border: 1px solid #FF6B6B30;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+    .warning-box h3 { color: #FF6B6B; font-size: 15px; margin-bottom: 8px; }
+    .warning-box ul { padding-left: 20px; }
+    .warning-box li { font-size: 14px; color: #8888AA; margin-bottom: 4px; }
+    .contact-box {
+      background: #12121A;
+      border: 1px solid #1E1E2E;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+    .contact-box h3 { font-size: 16px; margin-bottom: 8px; }
+    .contact-box p { font-size: 14px; color: #8888AA; margin: 0; }
+    a { color: #6C63FF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid #1E1E2E; font-size: 13px; color: #555566; text-align: center; }
+    .nav { display: flex; gap: 24px; margin-bottom: 48px; }
+    .nav a { font-size: 14px; color: #8888AA; }
+    .nav a:hover { color: #6C63FF; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <div class="logo-dot">
+        <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3zm0 14a7 7 0 0 0 7-7h2a9 9 0 0 1-8 8.94V20h3v2H8v-2h3v-2.06A9 9 0 0 1 3 9h2a7 7 0 0 0 7 7z"/></svg>
+      </div>
+      <span class="logo-name">MeetingMind</span>
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+
+    <div class="badge">Account</div>
+    <h1>Delete Your Account</h1>
+    <p class="sub">You can delete your MeetingMind account and all associated data at any time.</p>
+
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Open MeetingMind on your device</h3>
+        <p>Make sure you are signed in to the account you want to delete.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Go to Settings</h3>
+        <p>Tap the Settings tab at the bottom of the screen.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Tap "Delete Account"</h3>
+        <p>Scroll to the Privacy &amp; Data section and tap Delete Account.</p>
+      </div>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>Confirm deletion</h3>
+        <p>Follow the on-screen prompts to permanently delete your account.</p>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <h3>⚠️ This action is permanent</h3>
+      <ul>
+        <li>All your meetings, transcripts, and notes will be permanently deleted</li>
+        <li>Your account cannot be recovered after deletion</li>
+        <li>Data is removed from our servers within 30 days</li>
+        <li>Cancel your Pro subscription before deleting to avoid future charges</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h3>Can't access the app?</h3>
+      <p>If you no longer have access to the app and need your account deleted, email us at <a href="mailto:privacy@meetingmind-ai.com">privacy@meetingmind-ai.com</a> from the address associated with your account and we will delete it within 5 business days.</p>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 MeetingMind · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
